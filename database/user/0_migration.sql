@@ -1,0 +1,14 @@
+DROP TABLE IF EXISTS users;
+
+CREATE TABLE IF NOT EXISTS users (
+    id VARCHAR PRIMARY KEY,
+    name VARCHAR,
+    email VARCHAR UNIQUE,
+    username VARCHAR UNIQUE,
+    password VARCHAR,
+    role VARCHAR,
+    phone VARCHAR,
+    status VARCHAR,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    last_update TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
